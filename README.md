@@ -9,8 +9,10 @@ docker run aircraftdetector:1.0.0
 
 # Start Backend Server
 cd backend  
-docker build . -t backend
+docker build . -t backend  
+docker run backend  
 
 # Start Frontend Server
 cd frontend   
-docker build . -t frontend 
+docker build . -t frontend  
+docker run frontend  
