@@ -1,18 +1,16 @@
 # detect-plane
 
-# For backend python https://fastapi.tiangolo.com/
-pip3 install fastapi  
-pip3 install "uvicorn"  
+# Backend API
+I used Flask because its a popular and deemed the best API for python backend.  
 
-# Build the docker image
+# Build and run the docker image
 docker load -i aircraftdetector.tar  
 docker run aircraftdetector:1.0.0  
 
-# Launch the backend server
+# Start Backend Server
 cd backend  
-uvicorn main:app --reload  
+docker build . -t backend
 
-# Frontend
-cd frontend  
-npm i axios  
-npm start  
+# Start Frontend Server
+cd frontend   
+docker build . -t frontend 
